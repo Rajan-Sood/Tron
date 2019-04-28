@@ -4,6 +4,9 @@
 namespace tron {
 	namespace graphics {
 
+		void windowResize(GLFWwindow *window, int width, int height);
+
+
 		Window::Window(const char *title, int width, int height)
 		{
 			m_Title = title;
@@ -37,19 +40,32 @@ namespace tron {
 				return false;
 			}
 			glfwMakeContextCurrent(m_Window);
+
+			glfwSetWindowSizeCallback(m_Window, windowResize);
 			return true;
+
+		}
+
+		void Window::clear() const
+		{
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		}
+		
+
+		void Window::update() 
+		{
+			glfwPollEvents();
+			glfwSwapBuffers(m_Window);
 
 		}
 
 		bool Window::closed() const
 		{
-			return glfwWindowShouldClose(m_Window);
+			return glfwWindowShouldClose(m_Window) == 1;
 		}
-
-		void Window::update() const
+		void windowResize(GLFWwindow *window, int width, int height)
 		{
-			glfwSwapBuffers(m_Window);
-			glfwPollEvents();
+			glViewport(0, 0, width, height);
 
 		}
 	}
