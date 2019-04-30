@@ -1,4 +1,4 @@
-#include<GLFW/glfw3.h>
+//#include<GLFW/glfw3.h>
 #include<iostream>
 
 
@@ -19,6 +19,11 @@ int main()
 	{
 		//std::cout << window.getWidth() << ", " << window.getHeight() << std::endl;
 		window.clear();
+		double x, y;
+		window.getMousePosition(x, y);
+
+		std::cout << x << ", " << y << std::endl;
+		
 		glBegin(GL_QUADS);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(-0.5f, 0.5f);
