@@ -1,2 +1,6 @@
 ﻿  main.cpp
+  vec2.cpp
+  vec3.cpp
+  vec4.cpp
+  Generating Code...
   Tron-Core.vcxproj -> D:\AI\Tron\Debug\Tron-Core.exe

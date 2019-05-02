@@ -1,28 +1,28 @@
-//#include<GLFW/glfw3.h>
-#include<iostream>
-
-
 #include"source/graphics/window.h"
+#include"source/maths/maths.h"
 
 int main()
 {
 	using namespace tron;
 	using namespace graphics;
+	using namespace maths;
 
 	Window window("Tron!", 800, 600);
 
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 
-	//std::cout << glGetString(GL_VERSION) << std::endl;
+	vec3 a(1.0f, 2.0f,5.0f);
+	vec3 b(2, 4,6);
+
+	vec3 c = a + b;
+
+	//b -= vec2(1, 2);
 
 	while (!window.closed())
 	{
-		//std::cout << window.getWidth() << ", " << window.getHeight() << std::endl;
-		window.clear();
-		double x, y;
-		window.getMousePosition(x, y);
+		
 
-		std::cout << x << ", " << y << std::endl;
+		std::cout << a << std::endl;
 		
 		glBegin(GL_QUADS);
 		glVertex2f(-0.5f, -0.5f);
