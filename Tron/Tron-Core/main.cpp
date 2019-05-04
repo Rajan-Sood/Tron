@@ -16,7 +16,7 @@ int main()
 
 	vec3 c = a + b;
 
-	//b -= vec2(1, 2);
+	mat4 position = mat4::translation(vec3(2, 3, 4));
 
 	while (!window.closed())
 	{

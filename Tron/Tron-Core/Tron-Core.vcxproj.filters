@@ -30,6 +30,9 @@
     <ClCompile Include="source\maths\vec4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\maths\mat4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\graphics\window.h">
@@ -45,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\maths\maths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\maths\mat4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\maths\maths_func.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
