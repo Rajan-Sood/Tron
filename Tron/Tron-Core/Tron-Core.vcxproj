@@ -130,6 +130,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\graphics\buffers\buffer.cpp" />
+    <ClCompile Include="source\graphics\buffers\indexbuffer.cpp" />
+    <ClCompile Include="source\graphics\buffers\vertexarray.cpp" />
+    <ClCompile Include="source\graphics\simple2drenderer.cpp" />
     <ClCompile Include="source\graphics\shader.cpp" />
     <ClCompile Include="source\graphics\window.cpp" />
     <ClCompile Include="source\maths\mat4.cpp" />
@@ -138,6 +142,12 @@
     <ClCompile Include="source\maths\vec4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\graphics\buffers\buffer.h" />
+    <ClInclude Include="source\graphics\buffers\indexbuffer.h" />
+    <ClInclude Include="source\graphics\buffers\vertexarray.h" />
+    <ClInclude Include="source\graphics\simple2drenderer.h" />
+    <ClInclude Include="source\graphics\renderable2d.h" />
+    <ClInclude Include="source\graphics\renderer2d.h" />
     <ClInclude Include="source\graphics\shader.h" />
     <ClInclude Include="source\graphics\window.h" />
     <ClInclude Include="source\maths\mat4.h" />
