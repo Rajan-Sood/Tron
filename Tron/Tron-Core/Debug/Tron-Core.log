@@ -1,3 +1,10 @@
 ﻿  main.cpp
 d:\ai\tron\tron-core\source\maths\maths_func.h(10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\ai\tron\tron-core\main.cpp(43): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\ai\tron\tron-core\main.cpp(46): warning C4305: '+=': truncation from 'double' to 'float'
+d:\ai\tron\tron-core\main.cpp(48): warning C4305: '+=': truncation from 'double' to 'float'
+d:\ai\tron\tron-core\main.cpp(89): warning C4018: '<': signed/unsigned mismatch
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'D:\AI\Tron\Debug\vc120.pdb'; linking object as if no debug info
   Tron-Core.vcxproj -> D:\AI\Tron\Debug\Tron-Core.exe

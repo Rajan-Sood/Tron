@@ -1,4 +1,4 @@
-#include"indexBuffer.h"
+#include"indexbuffer.h"
 
 namespace tron {
 	namespace graphics {
@@ -6,15 +6,29 @@ namespace tron {
 		IndexBuffer::IndexBuffer(GLushort* data, GLsizei count)
 			:m_Count(count)
 		{
-			glGenBuffers(1, &m_BuffeID);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_BuffeID);
+			glGenBuffers(1, &m_BufferID);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_BufferID);
 			glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(GLfloat), data, GL_STATIC_DRAW);
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 
+		IndexBuffer::IndexBuffer(GLuint* data, GLsizei count)
+			:m_Count(count)
+		{
+			glGenBuffers(1, &m_BufferID);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_BufferID);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(GLuint), data, GL_STATIC_DRAW);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+		}
+
+		IndexBuffer::~IndexBuffer()
+		{
+			glDeleteBuffers(1, &m_BufferID);
+		}
+
 		void IndexBuffer::bind() const
 		{
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_BuffeID);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_BufferID);
 		}
 
 		void IndexBuffer::unbind() const
