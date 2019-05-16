@@ -1,4 +1,4 @@
- #include"source/graphics/window.h"
+#include"source/graphics/window.h"
 #include"source/maths/maths.h"
 #include"source/graphics/shader.h"
 
@@ -14,6 +14,7 @@
 #include"source/graphics/sprite.h"
 
 #include<time.h>
+#include"source/utility/timer.h"
 
 
 #define BATCH_RENDERER 1
@@ -75,10 +76,12 @@ int main()
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5f));
 	shader.setUniform4f("colour", vec4(0.2f, 0.3f, 0.8f, 1.0f));
 
+	Timer  time;
+	float timer = 0;;
+	unsigned int frames = 0;
 
 	while (!window.closed())
 	{
-		
 		window.clear();
 		double x, y;
 		window.getMousePosition(x, y);
@@ -96,8 +99,16 @@ int main()
 		renderer.end();
 #endif
 		renderer.flush();
-
 		window.update();
+		frames++;
+
+		if (time.elapsed() - timer > 1.0f)
+		{
+			timer += 1.0f;
+			printf("%d fps\n" ,frames);
+			frames = 0;
+		}
+
 	}
 	
 	return 0;
