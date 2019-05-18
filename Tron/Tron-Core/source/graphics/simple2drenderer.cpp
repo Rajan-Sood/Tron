@@ -1,5 +1,7 @@
 
 #include"simple2drenderer.h"
+#include"renderable2d.h"
+
 
 namespace tron {
 	namespace graphics {

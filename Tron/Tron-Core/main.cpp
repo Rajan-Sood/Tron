@@ -14,9 +14,11 @@
 #include"source/graphics/sprite.h"
 #include"source/utility/timer.h"
 
-#include<time.h>
 #include"source/graphics/layers/tilelayer.h"
 
+#include"source/graphics/layers/group.h"
+
+#include<time.h>
 
 #define BATCH_RENDERER 1
 #define TEST_50K_SPRITES 0
@@ -59,12 +61,19 @@ int main()
 	}
 
 #else
-	
-	layer.add(new Sprite(-15.0f, 5.0f, 6, 3, maths::vec4(1, 1, 1, 1)));
+	mat4 transform = mat4::translation(vec3(-15.0f, 5.0f, 0.0));
+	Group* group = new Group(transform);
+	group->add( new Sprite(0,0, 6, 3, maths::vec4(1, 1, 1, 1)));
 
-	layer.add(new Sprite(0.5f, 0.5f, 5.0f, 2.0f, maths::vec4(1, 0, 1, 1)));
+	Group* button = new Group(mat4::translation(vec3(0.5f, 0.5f, 0.0f)));
+	button->add(new Sprite(0, 0, 5.0f, 2.0f, maths::vec4(1, 0, 1, 1)));
+	button->add(new Sprite(0.5f, 0.5f, 3.0f, 1.0f, maths::vec4(0.2f, 0.3f, 0.8f, 1)));
+	group->add(button);
 
-#endif
+	layer.add(group);
+
+
+#endif 
 
 	
 	TileLayer layer2(&shader2);
