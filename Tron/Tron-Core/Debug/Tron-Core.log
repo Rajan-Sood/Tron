@@ -1,3 +1,9 @@
-﻿  window.cpp
-d:\ai\tron\tron-core\source\graphics\window.cpp(82): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+﻿  main.cpp
+d:\ai\tron\tron-core\source\maths\maths_func.h(10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  d:\ai\tron\dependencies\glfw\include\glfw\glfw3.h(104): note: see previous definition of 'APIENTRY'
+d:\ai\tron\tron-core\main.cpp(57): warning C4305: '+=': truncation from 'double' to 'float'
+d:\ai\tron\tron-core\main.cpp(59): warning C4305: '+=': truncation from 'double' to 'float'
+d:\ai\tron\tron-core\main.cpp(71): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\ai\tron\tron-core\main.cpp(110): warning C4154: deletion of an array expression; conversion to pointer supplied
   Tron-Core.vcxproj -> D:\AI\Tron\Debug\Tron-Core.exe
